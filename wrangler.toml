@@ -1,6 +1,6 @@
 name = "memos-worker"
 compatibility_date = "2026-07-01"
-main = "src/index.ts"
+main = "src/index.js"
 
 [assets]
 directory = "./src/public"
@@ -14,7 +14,7 @@ binding = "DB"
 database_id = "22832d17-1162-4a74-b199-7257ca859752"
 database_name = "memos"
 
-# R2 存储桶（桶名memos，绑定名固定R2）
+# R2 存储桶（桶名memos，绑定名R2）
 [[r2_buckets]]
 binding = "R2"
 bucket_name = "memos"
