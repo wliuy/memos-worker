@@ -1,23 +1,27 @@
 name = "memos-worker"
-compatibility_date = "2025-08-19"
-main = "src/index.js"
+compatibility_date = "2026-07-01"
+main = "src/index.ts"
+
 [assets]
 directory = "./src/public"
 run_worker_first = [
 	"/api/*"
 ]
 
+# D1 数据库
 [[d1_databases]]
 binding = "DB"
-database_id = "YOUR_D1_DATABASE_ID"
-database_name = "YOUR_D1_DATABASE_NAME"
+database_id = "22832d17-1162-4a74-b199-7257ca859752"
+database_name = "memos"
 
-[[kv_namespaces]]
-binding = "NOTES_KV"
-id = "YOUR_KV_NAMESPACE_ID"
-preview_id = ""
-
+# R2 存储桶（桶名memos，绑定名固定R2）
 [[r2_buckets]]
-binding = "NOTES_R2_BUCKET"
-bucket_name = "YOUR_R2_BUCKET_NAME"
-preview_bucket_name = "notes-files-preview"
+binding = "R2"
+bucket_name = "memos"
+preview_bucket_name = "memos-preview"
+
+# 站点全局变量
+[vars]
+SITE_NAME = "我的备忘录"
+ALLOW_REGISTER = "true"
+MAX_UPLOAD_SIZE = "10"
