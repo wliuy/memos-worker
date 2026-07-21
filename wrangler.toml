@@ -14,6 +14,11 @@ binding = "DB"
 database_id = "22832d17-1162-4a74-b199-7257ca859752"
 database_name = "memos"
 
+# KV 命名空间
+[[kv_namespaces]]
+binding = "NOTES_KV"
+id = "4473c9e2041e42d3907bab869a1efb97"
+
 # R2 存储桶（桶名memos，绑定名R2）
 [[r2_buckets]]
 binding = "R2"
